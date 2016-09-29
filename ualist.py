@@ -107,7 +107,7 @@ def ua(uat = None):
 def helpme():
     system("clear")
     print "--==[ "+bold+yellow+"esw0rmer"+endcolor
-    print "--==[ "+bold+blue+"Blue Code Team"+endcolor
+    print "--==[ "+bold+blue+"www.whitehatz.org"+endcolor
     print "--==[ "+bold+green+"User-Agent List"+endcolor
     print "~"*25
     print "--==[ "+bold+red+"Guide"+endcolor
