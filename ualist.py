@@ -104,21 +104,76 @@ def ua(uat = None):
             souas = lists[uat]
             return souas[randint(0,len(souas)-1)]
 
+def ualist(arg = None):
+    if arg == None:
+        print bold+green+"<< Windows List >>"+endcolor
+        for i in range(0, len(winlist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, winlist[i])
+        print bold+green+"\n\n<< Linux List >>"+endcolor
+        for i in range(0, len(linlist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, linlist[i])
+        print bold+green+"\n\n<< Macintosh List >>"+endcolor
+        for i in range(0, len(maclist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, maclist[i])
+        print bold+green+"\n\n<< Android List >>"+endcolor
+        for i in range(0, len(andlist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, andlist[i])
+        print bold+green+"\n\n<< Mobile List >>"+endcolor
+        for i in range(0, len(moblist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, moblist[i])
+        print bold+green+"\n\n<< Tablet List >>"+endcolor
+        for i in range(0, len(tablist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, tablist[i])
+    elif arg == "win":
+        print bold+green+"<< Windows List >>"+endcolor
+        for i in range(0, len(winlist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, winlist[i])
+    elif arg == "lin":
+        print bold+green+"<< Linux List >>"+endcolor
+        for i in range(0, len(linlist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, linlist[i])
+    elif arg == "mac":
+        print bold+green+"<< Macintosh List >>"+endcolor
+        for i in range(0, len(maclist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, maclist[i])
+    elif arg == "and":
+        print bold+green+"<< Android List >>"+endcolor
+        for i in range(0, len(andlist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, andlist[i])
+    elif arg == "mob":
+        print bold+green+"<< Mobile List >>"+endcolor
+        for i in range(0, len(moblist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, moblist[i])
+    elif arg == "tab":
+        print bold+green+"<< Tablet List >>"+endcolor
+        for i in range(0, len(tablist)):
+            print bold+green+"ID:"+endcolor+" {}\t{}".format(i, tablist[i])
+    else:
+        print bold+red+"[!] Error <002>"+endcolor
+
+def uas(os, uaid):
+    return lists[os][uaid]
+
 def helpme():
     system("clear")
-    print "--==[ "+bold+yellow+"esw0rmer"+endcolor
-    print "--==[ "+bold+blue+"www.whitehatz.org"+endcolor
-    print "--==[ "+bold+green+"User-Agent List"+endcolor
+    print "--==[ "+bold+yellow+"esw0rmer or Sagolera"+endcolor
+    print "--==[ "+bold+blue+"Turkz Group  <www.turkz.org >"+endcolor
+    print "--==[ "+bold+green+"User-Agent List V2"+endcolor
     print "~"*25
     print "--==[ "+bold+red+"Guide"+endcolor
     print ">>> from ualist import ua"
     print ">>> "+yellow+"print ua()"+endcolor+" or "+yellow+"print ua(argument)"+endcolor
+    print ">>> "+yellow+"print ualist()"+endcolor+" or "+yellow+"print ua(argument)"+endcolor
+    print ">>> "+yellow+"print uas()"+endcolor+" or "+yellow+"print uas(argument, id)"+endcolor
     print ""
     print "--==[ "+bold+red+"Argument"+endcolor
     print "~> "+yellow+"ua()"+endcolor+" = Random"
-    print "~> "+yellow+"ua(win)"+endcolor+" = Windows"
-    print "~> "+yellow+"ua(lin)"+endcolor+" = Linux"
-    print "~> "+yellow+"ua(mac)"+endcolor+" = Macintosh"
-    print "~> "+yellow+"ua(and)"+endcolor+" = Android"
-    print "~> "+yellow+"ua(mob)"+endcolor+" = Mobile"
-    print "~> "+yellow+"ua(tab)"+endcolor+" = Tablet"
+    print "~> "+yellow+"ua('win')"+endcolor+" = Windows"
+    print "~> "+yellow+"ua('lin')"+endcolor+" = Linux"
+    print "~> "+yellow+"ua('mac')"+endcolor+" = Macintosh"
+    print "~> "+yellow+"ua('and')"+endcolor+" = Android"
+    print "~> "+yellow+"ua('mob')"+endcolor+" = Mobile"
+    print "~> "+yellow+"ua('tab')"+endcolor+" = Tablet"
+    print ""
+    print "~> "+yellow+"ualist('lin')"+endcolor
+    print "~> "+yellow+"uas('mac', 0) or uas('win', 15)"+endcolor
