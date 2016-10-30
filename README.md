@@ -1,5 +1,5 @@
 # ualist
-# wwww.whitehatz.org
+# wwww.turkz.org
 User-Agents List
 
 --==[ esw0rmer
